@@ -1,0 +1,18 @@
+# =============================================================================
+# management config
+# =============================================================================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: auditevents,beans,conditions,configprops,env,flyway,health,heapdump,httptrace,info,jolokia,logfile,loggers,metrics,mappings,scheduledtasks,threaddump
+      base-path: /ops
+    enabled-by-default: true
+# =============================================================================
+# logging config
+# =============================================================================
+logging:
+  level:
+    io:
+      corbs:
+        csvkit: DEBUG
