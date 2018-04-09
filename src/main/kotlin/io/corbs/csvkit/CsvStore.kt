@@ -12,7 +12,7 @@ class CsvStore(@Autowired val redis: ReactiveRedisTemplate<String, String>) {
     fun save(mono: Mono<CsvLine>) {
 
         mono.subscribe {
-            redis.opsForList().rightPush(it.tag, it.line).subscribe()
+            redis.opsForList().rightPush(it.tag, it.line.trim()).subscribe()
         }
     }
 
