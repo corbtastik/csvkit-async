@@ -1,0 +1,7 @@
+---
+applications:
+- name: csvkit-async
+  memory: 1G
+  host: csvkit-async
+  path: target/csvkit-async-1.0.0.RELEASE.jar
+  buildpack: java_buildpack
